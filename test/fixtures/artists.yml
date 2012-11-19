@@ -9,10 +9,12 @@
 #  updated_at :datetime         not null
 #
 
-class Artist < ActiveRecord::Base
-  attr_accessible :name, :photo, :photo_cache, :remote_photo_url
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-  has_and_belongs_to_many :songs
-  mount_uploader :photo, AlbumPicUploader
-  validates :name, :presence => true
-end
+one:
+  name: MyString
+  photo: MyString
+
+two:
+  name: MyString
+  photo: MyString

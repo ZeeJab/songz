@@ -9,10 +9,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    artist_id = params[:id]
-    @artist = Artist.find(artist_id)
-    @albums = Album.where("artist_id=?",artist_id)
-    @songs = Song.all
+    @artist = Artist.find(params[:id])
   end
 
   def edit
