@@ -11,12 +11,16 @@
 #  updated_at :datetime         not null
 #
 
-class Song < ActiveRecord::Base
-  attr_accessible :audio, :name, :photo, :youtube
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-  has_and_belongs_to_many :albums
-  has_and_belongs_to_many :artists
-  has_and_belongs_to_many :genres
+one:
+  name: MyString
+  photo: MyString
+  audio: MyString
+  youtube: MyString
 
-  validates :name, :presence => true
-end
+two:
+  name: MyString
+  photo: MyString
+  audio: MyString
+  youtube: MyString

@@ -11,12 +11,10 @@
 #  updated_at :datetime         not null
 #
 
-class Song < ActiveRecord::Base
-  attr_accessible :audio, :name, :photo, :youtube
+require 'test_helper'
 
-  has_and_belongs_to_many :albums
-  has_and_belongs_to_many :artists
-  has_and_belongs_to_many :genres
-
-  validates :name, :presence => true
+class SongTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

@@ -9,10 +9,10 @@
 #  updated_at :datetime         not null
 #
 
-class Album < ActiveRecord::Base
-  attr_accessible :name, :photo
+require 'test_helper'
 
-  has_and_belongs_to_many :songs
-  mount_uploader :photo, AlbumPicUploader
-  validates :name, :presence => true
+class AlbumTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
