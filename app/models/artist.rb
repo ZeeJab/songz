@@ -14,9 +14,9 @@ class Artist < ActiveRecord::Base
 	has_many :songs
 	has_many :songs, :through => :albums
 
-  validates :name, :uniqueness => true
-  validates :name, :presence => true
-  validates :photo, :presence => true
+	  validates :name, :uniqueness => true
+	  validates :name, :presence => true
+	  validates :photo, :presence => true
   
 	mount_uploader :photo, ArtistPicUploader 
 end
