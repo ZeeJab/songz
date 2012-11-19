@@ -15,4 +15,6 @@
 /tmp
 
 # Ignore database
+config/database.yml
+config/initializers/carrierwave_init.rb
 
