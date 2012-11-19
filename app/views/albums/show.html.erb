@@ -2,7 +2,7 @@
 	<div id="albums" class="generic-box">		
 
     <div class = "album_info_container clearfix"> 
-      <div class = "album_album_photo"><%= image_tag @album.photo %></div><!-- .album_album_photo -->
+      <div class = "album_album_photo"><%= image_tag @album.photo.thumb.url %></div><!-- .album_album_photo -->
       <div class = "album_side_info">
         <div class = "album_title"><%= link_to @album.artist.name, artist_path(@album.artist) %></div><!-- .album_title -->
         <div class = "album_album"><%= @album.name %></div><!-- .album_title -->

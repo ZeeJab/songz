@@ -2,7 +2,7 @@
   <div id="song" class="generic-box">   
 
     <div class = "song_item_container clearfix"> 
-      <div class = "song_album_photo"><%= image_tag @song.photo %></div><!-- .song_album_photo -->
+      <div class = "song_album_photo"><%= image_tag @song.photo.thumb.url %></div><!-- .song_album_photo -->
       <div class = "song_side_info">
         <div class = "song_title"><span class="infomatics">artist: </span><%= link_to @song.artist.name, artist_path(@song.artist) %></div><!-- .song_title -->
         <div class = "song_album"><span class="infomatics">track: </span><%= @song.name %></div><!-- .song_album -->
