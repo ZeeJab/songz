@@ -35,3 +35,16 @@ b2.songs << s1 << s2
 b3.songs << s3
 b4.songs = [s4,s5,s6,s7]
 
+g1 = Genre.create(:name => "Rock")
+g2 = Genre.create(:name => "Pop")
+g3 = Genre.create(:name => "Jazz")
+g4 = Genre.create(:name => "Hiphop")
+g5 = Genre.create(:name => "Punk")
+
+s1.genres << g1 << g2
+s2.genres << g3
+s3.genres << g1 << g4 << g2
+s4.genres << g5 << g4
+s5.genres << g1 << g4
+s6.genres << g2
+s7.genres << g5 << g3
