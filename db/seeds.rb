@@ -19,17 +19,17 @@ b2 = Album.create(:name => "Nastradamus", :remote_photo_url => "http://upload.wi
 b3 = Album.create(:name => "Californication", :remote_photo_url => 'http://upload.wikimedia.org/wikipedia/en/thumb/d/df/RedHotChiliPeppersCalifornication.jpg/220px-RedHotChiliPeppersCalifornication.jpg')
 b4 = Album.create(:name => "Ceremonials", :remote_photo_url => 'http://4.bp.blogspot.com/-tut5xebYVBs/T8CKcWG_IsI/AAAAAAAACPQ/y0pAaD6kJ2M/s1600/Florence%2520+%2520The%2520Machine%2520-%2520Ceremonials.jpg')
 
-s1 = Song.create(:name => "Some Song", :remote_photo_url => 'http://www.kveller.com/blog/wp-content/uploads/2011/11/Keha.jpg', :artist_id => a1.id)
-s2 = Song.create(:name => "Walking on a dream", :remote_photo_url => 'http://thinksoul25.files.wordpress.com/2011/06/empire-of-the-sun.jpg', :artist_id => a3.id)
-s3 = Song.create(:name => "Chains", :remote_photo_url => 'http://breakingchainsministries.com/wp-content/uploads/2011/11/breaking-the-chains-10.jpg', :artist_id => a2.id)
-s4 = Song.create(:name => "Only if for a night", :remote_photo_url => 'http://4.bp.blogspot.com/-CeVd6JmpjG4/TwUTqYjWQTI/AAAAAAAAANY/U41bS8CBbAs/s1600/Ceremonials_%253D2.png', :artist_id => a4.id)
-s5 = Song.create(:name => "Shake it out", :remote_photo_url => 'http://sexualityinart.files.wordpress.com/2012/07/florence-shake-it-out-weeknd.jpg', :artist_id => a4.id)
-s6 = Song.create(:name => "What the water gave me", :remote_photo_url => 'http://cdn.songonlyrics.com/wp-content/uploads/2011/08/florence-and-the-machine-s-what-the-water-gave-me.jpg', :artist_id => a4.id)
-s7 = Song.create(:name => "Never let me go", :remote_photo_url => 'http://www.edrants.com/wp-content/uploads/2010/09/neverletmego.jpg', :artist_id => a4.id)
+s1 = Song.create(:name => "Some Song", :remote_photo_url => 'http://www.kveller.com/blog/wp-content/uploads/2011/11/Keha.jpg')
+s2 = Song.create(:name => "Walking on a dream", :remote_photo_url => 'http://thinksoul25.files.wordpress.com/2011/06/empire-of-the-sun.jpg')
+s3 = Song.create(:name => "Chains", :remote_photo_url => 'http://breakingchainsministries.com/wp-content/uploads/2011/11/breaking-the-chains-10.jpg')
+s4 = Song.create(:name => "Only if for a night", :remote_photo_url => 'http://4.bp.blogspot.com/-CeVd6JmpjG4/TwUTqYjWQTI/AAAAAAAAANY/U41bS8CBbAs/s1600/Ceremonials_%253D2.png')
+s5 = Song.create(:name => "Shake it out", :remote_photo_url => 'http://sexualityinart.files.wordpress.com/2012/07/florence-shake-it-out-weeknd.jpg')
+s6 = Song.create(:name => "What the water gave me", :remote_photo_url => 'http://cdn.songonlyrics.com/wp-content/uploads/2011/08/florence-and-the-machine-s-what-the-water-gave-me.jpg')
+s7 = Song.create(:name => "Never let me go", :remote_photo_url => 'http://www.edrants.com/wp-content/uploads/2010/09/neverletmego.jpg')
 
-a1.albums << b1
-a2.albums << b2
-a3.albums << b3 << b4
+a2.songs << s1 << s2
+a3.songs << s3
+a4.songs = [s4,s5,s6,s7]
 
 b2.songs << s1 << s2
 b3.songs << s3

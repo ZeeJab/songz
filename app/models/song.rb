@@ -12,11 +12,13 @@
 #
 
 class Song < ActiveRecord::Base
-  attr_accessible :audio, :name, :photo, :youtube
+  attr_accessible :audio, :name, :photo, :youtube, :photo_cache, :remote_photo_url
 
   has_and_belongs_to_many :albums
   has_and_belongs_to_many :artists
   has_and_belongs_to_many :genres
+
+	mount_uploader :photo, SongPicUploader
 
   validates :name, :presence => true
 end
