@@ -1,0 +1,13 @@
+<div id="container">
+	<div id="songs" class="generic-box">	
+    <% @songs.each do |song| %> 
+      <div class="song_box">
+        <%= link_to image_tag(song.photo), song_path(song) %> <br>
+        <%= link_to song.name, song_path(song) %>
+      </div><!-- .song_box -->
+    <% end %>
+		<div class="library_subtitle">
+      <%= link_to "+ Add New Song", new_song_path %>
+    </div><!-- .library_subtitle -->
+	</div>
+</div><!-- #container --> 

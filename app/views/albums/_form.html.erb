@@ -1,0 +1,44 @@
+<%= form_for(@album, :html => {:multipart => true}) do |f| %>
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class ="csslabel">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  </div>
+  
+
+  <div class="field">
+    
+  	<label>Album Photo</label>
+    
+    <%= f.file_field :photo %> 
+    <%= f.hidden_field :photo_cache %>
+    <div class ="csslabel">
+    <%= f.text_field :remote_photo_url %>
+    <%= image_tag(@album.photo_url) if @album.photo? %> 
+</div>
+<div class= 'field'>
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.all.map {|f| [f.name, f.id]} %>
+  </div>
+
+      <%= f.submit %>
+  
+  </div>
+
+  
+  
+  
+<% end %>

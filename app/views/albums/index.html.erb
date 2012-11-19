@@ -1,0 +1,12 @@
+<div id="container">
+	<div id="albums" class="generic-box">		
+    <ul id = "artist_list">
+    	<% @albums.each do |album| %>
+      	<li><%= link_to image_tag(album.photo), album_path(album) %></li>
+    	<% end %>
+    </ul>
+    <div class="library_subtitle">
+      <%= link_to "+ Add New Album", new_album_path %>
+    </div><!-- .library_subtitle -->
+	</div><!-- .generic-box -->
+</div><!-- #container --> 

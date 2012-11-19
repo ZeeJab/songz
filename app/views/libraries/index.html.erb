@@ -1,0 +1,35 @@
+<div id="container">
+  <div id="library">
+
+    <% @albums.each do |album| %> 
+    
+      <div class="library_item_container clearfix">
+        <div class="library_album_photo">
+          <%= link_to image_tag(album.photo), album_path(album) %>
+        </div><!-- .library_album_photo -->
+        <div class="library_side_info">
+          <div class="library_title"><%= link_to album.artist.name, artist_path(album.artist) %> </div><!-- .library_title -->
+          <div class="library_album"><%= link_to album.name, album_path(album) %></div><!-- .library_album -->
+          <% if album.songs.any? %>
+            <ul class="library_songs">
+            <% album.songs.each do |song| %>
+              <li><%= link_to song.name, song_path(song) %></li>
+            <% end %> 
+            </ul>
+          <% end %>
+          
+        </div><!-- .library_side_info -->
+      </div><!-- .library_item_container -->
+    <% end %>
+
+
+
+  </div><!-- #library -->
+</div><!-- #container -->
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Songz</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+    <title>SONG-A-TRON</title>
+    
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+</head>
+<body>
+  <div id="top">
+
+  <nav class="nav">
+    <span class='mini-logo'>SONG-A-TRON</span>
+    <span id='nav-items'>
+    <%= link_to "Home", root_path %>
+    |
+    <%= link_to "Artists", artists_path %>
+    |
+    <%= link_to "Albums", albums_path %>
+    |
+    <%= link_to "Songs", songs_path %>
+    |
+    <%= link_to "Show Library", libraries_path %>
+  </span>
+
+  </nav>
+
+
+<div class="clear"></div>
+
+<div id = 'yield-styling'>
+  <%= yield %>
+</div>
+
+  <footer>
+    <div class="sprite" id="social-media" class="clearfix">
+      <ul>
+        <li><a href="#" class="facebook">Facebook</a></li>
+        <li><a href="#" class="twitter">Twitter</a></li>
+        <li><a href="#" class="linkedin">LinkedIn</a></li>  
+      </ul>
+    </div><!-- #social-media -->
+
+    <div id="copyright">a SONG-A-TRON production</div>
+      <span id="left"> © 2012 Song-a-Tron :: All rights reserved | | | | HandCoded by Zahra Jabini :: Raymond Chan :: Hsi-Chang Lin :: Audric Kim</span>
+    </div>
+
+    
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<%= form_for @song do |s| %>
+
+  <% if @song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+
+      <ul>
+      <% @song.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <div class ="csslabel">
+    <%= s.label :name %>
+    <%= s.text_field :name %>
+    </div>
+  </div>
+    
+
+    <div class="field">
+        <label>Song Photo</label>
+      <%= s.file_field :photo %> 
+      <%= s.hidden_field :photo_cache %>
+
+      <div class ="csslabel">
+        <%= s.text_field :remote_photo_url %>
+        <%= image_tag(@song.photo_url) if @song.photo? %> 
+      </div>
+    </div>
+
+<div class="field">
+  <span>
+    <%= s.label :artist_id %>
+    <%= s.select :artist_id, Artist.all.map {|s| [s.name, s.id]} %>
+  </span>
+
+  <span>
+    <%= s.label :album_id %>
+    <%= s.select :album_id, Album.all.map {|s| [s.name, s.id]} %>
+  </span>
+  <br>
+  <%= s.submit %>   
+</div>
+
+
+<% end %>
