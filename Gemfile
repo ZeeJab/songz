@@ -11,6 +11,7 @@ gem 'pry-rails'
 gem 'fog'
 gem 'carrierwave'
 gem 'rails-footnotes'
+gem 'rmagick' #gem that works with imagemagick
 
 
 # Gems used only for assets and not required

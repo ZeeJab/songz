@@ -4,7 +4,7 @@
 
       <div class="artist_name">
         <%= @artist.name %>
-        <%= image_tag @artist.photo, :class => "artist_photo_show" %>
+        <%= image_tag @artist.photo.thumb.url, :class => "artist_photo_show" %>
       </div><!-- .artist_name -->
 
       <div class="artist_show_right">  
