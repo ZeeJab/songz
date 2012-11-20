@@ -2,9 +2,18 @@
 
 
 #container {
+
      width: 100%;
      margin: 0;
      font-family: $font-family; 
+
+     .logo {
+        font-family: "Monoton", sans-serif;
+        font-size: 90px;
+        color: $blue-color;
+        text-align: center;
+        padding-top: 150px;
+     }
 
     #top-box {
      background: $gray-color;     
