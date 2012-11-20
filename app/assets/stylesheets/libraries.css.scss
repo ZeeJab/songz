@@ -1,0 +1,44 @@
+@import "container";
+@import "styles";
+
+#library_styles {
+
+	#library {
+	    background-color: #E6E8EA;
+	    padding: 20px;
+	}
+
+	.library_item_container{
+	    @include item_container();
+	}
+
+	.csslabel input {
+    	@include csslabel();
+	}
+
+	.library_album_photo{
+	    @include album_photo();
+	}
+
+	.library_side_info{
+	    @include side_info();
+	}
+
+	.library_title{
+	    @include title();
+	}
+
+	.library_album{
+	    @include album();
+	}
+
+	.library_songs{
+	    @include songs(); 
+	}
+
+}
+
+.library_subtitle {
+    text-align: center;
+    font-family: "Monoton", sans-serif;
+}

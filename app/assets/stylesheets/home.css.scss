@@ -1,0 +1,31 @@
+@import "styles";
+
+
+#container {
+     width: 100%;
+     margin: 0;
+     font-family: $font-family; 
+
+    #top-box {
+     background: $gray-color;     
+     position: relative;    
+     } 
+
+    #top-box {
+     background: $gray-color;
+     position: relative;    
+     } 
+
+    #top-art {
+    background: url('top-box-01.png');
+    position: absolute;
+    width: 1440px;
+    height: 508px;
+    top: -150px;
+    opacity: .2;
+	}
+
+	.whitespacing {
+     height: 200px;
+ 	}
+}

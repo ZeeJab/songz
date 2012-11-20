@@ -1,0 +1,52 @@
+@import "container";
+@import "styles";
+
+#album_styles {
+
+	#album {
+	    background-color: #E6E8EA;
+	    padding: 20px;
+	}
+
+	#albums {
+	  background-color: #3CA674;  
+	  padding: 40px;
+	}
+
+	.field{
+		@include field();
+	}
+
+	.csslabel input {
+    	@include csslabel();
+	}
+
+	.album_item_container{
+	    @include item_container();
+	}
+
+	.album_album_photo{
+	    @include album_photo();
+	}
+
+	.album_side_info{
+	    @include side_info();
+	}
+
+	.album_title{
+	    @include title();
+	}
+
+	.album_album{
+	    @include album();
+	}
+
+	.album_songs{
+	    @include songs(); 
+	}
+
+	.album_box {
+    display: inline-block;
+    margin: 0 20px 30px 20px;
+	}
+}

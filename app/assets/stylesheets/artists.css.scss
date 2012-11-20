@@ -1,0 +1,57 @@
+@import "container";
+@import "styles";
+
+#artist_styles {
+
+    #artists {
+    background-color: $blue-color;
+    padding: 40px;
+    }
+
+    .field{
+        @include field();
+    }
+
+    .album-space {
+    padding: 20px;
+    float: left;
+    display: inline;
+    }
+
+    .artist_name {
+    font-size: 40px;
+    color: $black-color;
+    font-family: $font-family;
+    padding: 0 20px 20px 40px;
+    float: left;
+    }
+    
+    .artist_photo_show {
+    padding: 0 0 0 60px;
+    width: 500px;
+    height: 300px;
+    }
+
+    .artist_show_right{
+    padding: 35px 0 0 0;
+    width: 525px;
+    float:left; 
+    }
+
+    .menu_options {
+    font-family: $font-family;
+    font-size: 18px;
+    text-align: center;
+    }   
+}
+
+
+#artist_list li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+list-style:none;
+padding: 50px;
+width: 500px;
+}

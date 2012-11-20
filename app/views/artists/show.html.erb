@@ -1,4 +1,4 @@
-<div id="container">
+<div id="artists_styles">
 	<div id="artists" class="generic-box">	
     <div class="update clearfix">
 
@@ -15,9 +15,9 @@
       </div><!-- .artist_show"_right -->
     </div><!-- .update -->
 
-    <div class = "menu_options">
-        <%= link_to "Edit Artist Information", edit_artist_path(@artist) %>
-        <%= link_to "Delete Artist from Library", artist_path(@artist), :method => :delete, :confirm => "Are you sure?" %>    
+    <div class="menu_options">
+      <%= link_to "Edit Artist Information", edit_artist_path(@artist) %>
+      <%= link_to "Delete Artist from Library", artist_path(@artist), :method => :delete, :confirm => "Are you sure?" %>    
     </div><!-- .menu_options -->
 	</div><!-- #artists -->
 </div><!-- #container -->

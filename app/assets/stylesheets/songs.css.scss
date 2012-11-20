@@ -1,0 +1,52 @@
+@import "container";
+@import "styles";
+
+#song_styles {
+
+	#song {
+	    background-color: #E6E8EA;
+	    padding: 20px;
+	}
+
+	#songs {
+  		background-color: #6FBFB7;
+  		padding: 40px;
+	}
+
+	.field{
+		@include field();
+	}
+
+	.csslabel input {
+    	@include csslabel();
+	}
+
+	.song_item_container{
+	    @include item_container();
+	}
+
+	.song_album_photo{
+	    @include album_photo();
+	}
+
+	.song_side_info{
+	    @include side_info();
+	}
+
+	.song_title{
+	    @include title();
+	}
+
+	.song_album{
+	    @include album();
+	}
+
+	.song_songs{
+	    @include songs(); 
+	}
+
+	.song_box {
+    display: inline-block;
+    margin: 0 20px 30px 20px;
+	}
+}
