@@ -1,0 +1,9 @@
+<% url = youtube[(youtube.index("v=")+2)..-1] %>
+<% if url.include? "&" %>
+  <% video = url[0..(url.index("&")-1)] %>
+<% else %>
+  <% video = url %>
+<% end %>
+<% final = "http://www.youtube.com/embed/#{video}" %>
+
+<iframe width="480" height="360" src="<%= final %>" frameborder="0" allowfullscreen></iframe>
