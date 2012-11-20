@@ -18,6 +18,7 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
+    @artist.song_ids = params[:@artist][:song_ids]
     if @artist.update_attributes(params[:artist])
       redirect_to artists_path
     else

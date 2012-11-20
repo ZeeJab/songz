@@ -16,8 +16,14 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  </div>
   
+
+  <% Song.all.each do |song| %>
+    <span><%= song.name %></span>
+    <%= check_box_tag '@album[song_ids][]', song.id, @album.songs.include?(song) %>
+  <% end %>
+  
+  </div>
 
   <div class="field">
     
