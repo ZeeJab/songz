@@ -10,13 +10,32 @@
           <% end %>
           </div><!-- .song_title -->
         <div class = "song_album"><span class="infomatics">track: <%= @song.name %></span></div><!-- .song_album -->
-        <div class = "song_album"><span class="infomatics">albums: </span>
 
+        <div class = "song_album"><span class="infomatics">albums: </span>
           <% @song.albums.each do |album| %>
             <%= album.name %>
           <% end %>
-
         </div><!-- .song_album -->
+
+        <div class = "song_album"><span class="infomatics">genres: </span>
+          <% @song.genres.each do |genre| %>
+            <%= genre.name %>
+          <% end %>
+        </div><!-- .song_album -->
+
+        <!-- MP3 IS SHOWN HERE -->
+        <div class = "song_album">  <b>MP3:</b>
+          <%= audio_tag @song.audio, :controls => true %>
+        </div><!-- .song_album -->
+
+        <!-- YOU TUBE VIDEO IS SHOWN HERE -->
+        <div class = "song_album">  <b>Youtube:</b>
+          <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.youtube } %>
+        </div><!-- .song_album -->
+
+
+
+
         <br>
         <div><span class="infomatics"><%= link_to "Edit Song", edit_song_path(@song) %> | <%= link_to "Delete Song", song_path(@song), :method => :delete, :confirm => "Are you sure?" %> </span></div>
       </div><!-- .song_side_info -->
