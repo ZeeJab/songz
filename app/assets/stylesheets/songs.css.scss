@@ -13,7 +13,7 @@
   		padding: 40px;
 	}
 
-	.field{
+	.field {
 		@include field();
 	}
 
@@ -21,11 +21,11 @@
     	@include csslabel();
 	}
 
-	.song_item_container{
+	.song_item_container {
 	    @include item_container();
 	}
 
-	.song_album_photo{
+	.song_album_photo {
 	    @include album_photo();
 	}
 
@@ -37,8 +37,12 @@
 	    @include title();
 	}
 
-	.song_album{
+	.song_album {
 	    @include album();
+	}
+
+	.youtube {
+		text-align: center;
 	}
 
 	.song_songs{

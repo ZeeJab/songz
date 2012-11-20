@@ -24,12 +24,14 @@
         </div><!-- .song_album -->
 
         <!-- MP3 IS SHOWN HERE -->
+        <br>
         <div class = "song_album">  <b>MP3:</b>
           <%= audio_tag @song.audio, :controls => true %>
         </div><!-- .song_album -->
 
         <!-- YOU TUBE VIDEO IS SHOWN HERE -->
-        <div class = "song_album">  <b>Youtube:</b>
+        <br>
+        <div class = "song_album youtube">
           <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.youtube } %>
         </div><!-- .song_album -->
 
