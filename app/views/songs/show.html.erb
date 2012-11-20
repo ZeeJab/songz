@@ -4,9 +4,19 @@
     <div class = "song_item_container clearfix"> 
       <div class = "song_album_photo"><%= image_tag @song.photo.thumb.url %></div><!-- .song_album_photo -->
       <div class = "song_side_info">
-        <div class = "song_title"><span class="infomatics">artist: </span><%= link_to @song.artist.name, artist_path(@song.artist) %></div><!-- .song_title -->
-        <div class = "song_album"><span class="infomatics">track: </span><%= @song.name %></div><!-- .song_album -->
-        <div class = "song_album"><span class="infomatics">album: </span><%= link_to @song.album.name, album_path(@song.album) %></div><!-- .song_album -->
+        <div class = "song_title"><span class="infomatics">artist: </span>
+          <% @song.artists.each do |artist| %>
+            <%= artist.name %>
+          <% end %>
+          </div><!-- .song_title -->
+        <div class = "song_album"><span class="infomatics">track: <%= @song.name %></span></div><!-- .song_album -->
+        <div class = "song_album"><span class="infomatics">albums: </span>
+
+          <% @song.albums.each do |album| %>
+            <%= album.name %>
+          <% end %>
+
+        </div><!-- .song_album -->
         <br>
         <div><span class="infomatics"><%= link_to "Edit Song", edit_song_path(@song) %> | <%= link_to "Delete Song", song_path(@song), :method => :delete, :confirm => "Are you sure?" %> </span></div>
       </div><!-- .song_side_info -->
