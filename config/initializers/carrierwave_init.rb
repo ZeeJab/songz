@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
     :region                 => 'us-east-1'  # optional, defaults to 'us-east-1'
   }
   
-  config.fog_directory  = 'song-a-tron'                     # required
+  config.fog_directory  = 'song-a-tron1'                     # required
   config.fog_public     = false                                   # optional, defaults to true
 
 end
