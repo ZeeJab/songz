@@ -33,6 +33,13 @@
     <% end %>
   </div>
 
+  <div class='field'>
+    <h3>Genres</h3>
+    <% Genre.all.each do |genre| %>
+      <span><%= genre.name %></span>
+      <%= check_box_tag '@song[genre_ids][]', genre.id, @song.genres.include?(genre) %>
+    <% end %>
+  </div>
 
   <div class='field'>
     <%= f.label :photo %>

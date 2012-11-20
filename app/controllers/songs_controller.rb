@@ -35,6 +35,7 @@ class SongsController < ApplicationController
 
     @song.artist_ids = params[:@song][:artist_ids]
     @song.album_ids = params[:@song][:album_ids]
+    @song.genre_ids = params[:@song][:genre_ids]
 
     if @song.update_attributes(params[:song])
       redirect_to songs_path

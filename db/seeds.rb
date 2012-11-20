@@ -1,6 +1,7 @@
 Song.delete_all
 Artist.delete_all
 Album.delete_all
+Genre.delete_all
 
 a1 = Artist.create(:name => "Burial", :remote_photo_url => 'http://hypetrak.101medialablimit.netdna-cdn.com/images/2011/03/Burial.jpg')
 a2 = Artist.create(:name => "Nas", :remote_photo_url => "http://allhiphop.files.wordpress.com/2012/08/nas.gif?w=620")
