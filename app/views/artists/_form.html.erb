@@ -18,6 +18,10 @@
       <%= f.text_field :name %>
     </div>
 
+  <% Song.all.each do |song| %>
+    <span><%= song.name %></span>
+    <%= check_box_tag '@artist[song_ids][]', song.id, @artist.songs.include?(song) %>
+  <% end %>
 
     	<label>Artist Photo</label>
       <%= f.file_field :photo %> 

@@ -9,10 +9,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    artist_id = params[:id]
-    @artist = Artist.find(artist_id)
-    @albums = Album.where("artist_id=?",artist_id)
-    @songs = Song.all
+    @artist = Artist.find(params[:id])
   end
 
   def edit
@@ -21,6 +18,7 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
+    @artist.song_ids = params[:@artist][:song_ids]
     if @artist.update_attributes(params[:artist])
       redirect_to artists_path
     else

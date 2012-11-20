@@ -4,16 +4,21 @@
 
       <div class="artist_name">
         <%= @artist.name %>
-        <%= image_tag @artist.photo.thumb.url, :class => "artist_photo_show" %>
+        <%= image_tag @artist.photo, :class => "artist_photo_show" %>
       </div><!-- .artist_name -->
 
+
+
       <div class="artist_show_right">  
-        <% @albums.each do |album| %>
-          <div class="album-space"><%= link_to image_tag(album.photo), album_path(album) %></div>
-        <% end %>
-        <div class="clearboth"></div>
+        <ul>
+          <% @artist.songs.map(&:albums).flatten.uniq.each do |album| %>
+            <li><%= link_to album.name, album %></li>
+          <% end %>
+        </ul>
+
       </div><!-- .artist_show"_right -->
     </div><!-- .update -->
+
 
     <div class = "menu_options">
         <%= link_to "Edit Artist Information", edit_artist_path(@artist) %>

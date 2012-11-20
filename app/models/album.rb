@@ -7,16 +7,12 @@
 #  photo      :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  artist_id  :integer
 #
 
 class Album < ActiveRecord::Base
-	belongs_to :artist
-	has_many :songs
+  attr_accessible :name, :photo, :photo_cache, :remote_photo_url
 
-	validates :name, :uniqueness => true
+  has_and_belongs_to_many :songs
+  mount_uploader :photo, AlbumPicUploader
   validates :name, :presence => true
-  validates :photo, :presence => true
-
-	mount_uploader :photo, AlbumPicUploader 
 end

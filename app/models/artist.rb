@@ -10,13 +10,9 @@
 #
 
 class Artist < ActiveRecord::Base
-	has_many :albums
-	has_many :songs
-	has_many :songs, :through => :albums
+  attr_accessible :name, :photo, :photo_cache, :remote_photo_url
 
-	  validates :name, :uniqueness => true
-	  validates :name, :presence => true
-	  validates :photo, :presence => true
-  
-	mount_uploader :photo, ArtistPicUploader 
+  has_and_belongs_to_many :songs
+  mount_uploader :photo, AlbumPicUploader
+  validates :name, :presence => true
 end

@@ -26,6 +26,7 @@ class AlbumsController < ApplicationController
 
 	def update
 		@album = Album.find(params[:id])
+		@album.song_ids = params[:@album][:song_ids]
 
 		if @album.update_attributes(params[:album])
 			redirect_to @album

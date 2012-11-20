@@ -5,19 +5,21 @@
 #  id         :integer          not null, primary key
 #  name       :string(255)
 #  photo      :string(255)
+#  audio      :string(255)
+#  youtube    :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  artist_id  :integer
-#  album_id   :integer
 #
 
 class Song < ActiveRecord::Base
-	belongs_to :album
-	belongs_to :artist
+  attr_accessible :audio, :name, :photo, :audio, :youtube, :photo_cache, :remote_photo_url
 
-  validates :name, :uniqueness => true
+  has_and_belongs_to_many :albums
+  has_and_belongs_to_many :artists
+  has_and_belongs_to_many :genres
+
+	mount_uploader :photo, SongPicUploader
+  
+
   validates :name, :presence => true
-  validates :photo, :presence => true
-
-	mount_uploader :photo, SongPicUploader 
 end
