@@ -105,41 +105,49 @@ footer {
           #social-media ul li a.linkedin:hover {
                background-position: -96px -54px;
           }
+
+          
 }
+
+
+
+
+
+
 
 #yield-styling {
-     font-family: 'Corben', cursive;
-     font-size: 30px;
-}
+          font-family: 'Corben', cursive;
+          font-size: 30px;
 
-#error_explanation {
-    padding:0.8em;
-    margin-bottom:1em;
-    border:2px solid #ddd;
-    color: red;
-}
+          #error_explanation {
+               padding:0.8em;
+               margin-bottom:1em;
+               border:2px solid #ddd;
+               color: red;
+          }
 
-.mini-logo {
-     font-family: 'Monoton', cursive;
-     font-size: 30px;
-     margin: auto;
-     float: left;
-     color: #5F5C6C;
+           .alignright {
+               float: right; 
+               padding: 0 0 10px 10px; /* note the padding around a right floated image */
+          }
+
+          .alignleft {
+               float: left; 
+               padding: 0 10px 10px 0; /* note the padding around a left floated image */
+          }
+
+          .mini-logo {
+               font-family: 'Monoton', cursive;
+               font-size: 30px;
+               margin: auto;
+               float: left;
+               color: #5F5C6C;
+          }
 }
 
 .infomatics {
     font-family: 'Offside', cursive;
     font-size: 18px;
-}
-
- .alignright {
-  float: right; 
-  padding: 0 0 10px 10px; /* note the padding around a right floated image */
-}
-
-.alignleft {
-  float: left; 
-  padding: 0 10px 10px 0; /* note the padding around a left floated image */
 }
 
 nav {
