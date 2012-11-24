@@ -16,26 +16,51 @@ Developers: Zahra Jabini :: Raymond Chan :: Hsi-Chang Lin
 }
 
 body {
+}
+
+nav {
+     padding: 30px;
+     font-family: 'Corben', cursive;
+    
+     width: 100%;
+     margin: auto;
+
+     div {
+          float: right;
+     }
 
      a {
+     padding-left: 20px;
+     padding-right: 20px;
+     font-size: 20px;
+     color: #110408;
+     float: left;
+     }
+
+     a:hover {
+     color: $blue-color;
+     border-bottom: 1px dotted $blue-color;
+     }
+}
+
+a {
      text-decoration: none;
      color: #5F5C6C;
      font-size: 25px;
-     }
+}
 
-     label {
+label {
      display: block;
-     }
+}
 
-     img {
+img {
      width: 200px;
      height: 200px;
-     }
+}
 
-     h3 {
-          color: red;
-          margin-top: 10px;
-     }
+h3 {
+     color: red;
+     margin-top: 10px;
 }
 
 footer {
@@ -150,30 +175,7 @@ footer {
      padding: 0 10px 10px 0; /* note the padding around a left floated image */
      }
 
-nav {
-     padding: 30px;
-     font-family: 'Corben', cursive;
-    
-     width: 100%;
-     margin: auto;
 
-     div {
-          float: right;
-     }
-
-     a {
-     padding-left: 20px;
-     padding-right: 20px;
-     font-size: 20px;
-     color: #110408;
-     float: left;
-     }
-
-     a:hover {
-     color: $blue-color;
-     border-bottom: 1px dotted $blue-color;
-     }
-}
 
 .update {
      padding: 20px;
